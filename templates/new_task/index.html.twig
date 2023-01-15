@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello NewTaskController!{% endblock %}
+{% block body %}
+  <div class="container">
+    <div class="space">
+
+    {% if task.id %}
+      <h1>Edit Ticket</h1>
+    {% else %}
+      <h1>New Ticket</h1>
+    {% endif %}
+
+
+      <a href="{{ path('app_display_task',) }}"><button>⬅️ Retour</button></a>
+    </div>
+    {{ form_start(NewTaskForm) }}
+    {{ form_errors(NewTaskForm) }}
+
+    <div class="cards">
+      <div class="content_cards">
+        <div class="space">
+          <div class="cards_img">
+            <span class="title_Tickets">New Ticket</span>
+          </div>
+        </div>
+        <label for="title" name="title">{{ form_label(NewTaskForm.title) }}</label>
+        {{ form_widget(NewTaskForm.title) }}
+        <label for="description" name="description">{{ form_label(NewTaskForm.content) }}</label>
+        {{ form_widget(NewTaskForm.content) }}
+
+        <label for="status" name="status">Status</label>
+        {{ form_widget(NewTaskForm.status_id) }}
+
+
+        <button type="submit" class="btn">Post Ticket</button>
+      </div>
+    </div>
+  </div>
+    {{ form_end(NewTaskForm) }}
+
+{% endblock %}

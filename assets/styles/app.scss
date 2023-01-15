@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+body {
+    background-color: lightgray;
+}
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #fff;
+    --bgcolor: #f0f0f0;
+    --blue: hsl(228, 45%, 44%);
+}
+
+body {
+    background-color: var(--bgcolor);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    background-color: var(--white);
+}
+
+input[type="email"], input[type="password"] {
+    border: 1px hsl(228, 45%, 44%) solid;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    background-color: var(--white);
+    resize: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+
+
+
+button {
+    background-color: hsl(228, 45%, 44%);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.post {
+    margin-bottom: 10px;
+}
+
+
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 5px 20px 20px 20px;
+    background-color: var(--white);
+    border-radius: 10px;
+}
+
+
+.cards {
+    padding: 10px;
+    display: flex;
+    background-color: var(--bgcolor);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+img {
+    width: 32px;
+    margin-right: 5px;
+}
+
+.cards_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+
+.title_Tickets {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.space {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.owner {
+    font-size: 14px;
+    font-weight: 500;
+    color: hsl(228, 45%, 44%);
+}
+
+
+.content_cards {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    background-color: var(--white);
+}
+
+
+
+
+
+.info {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    margin: 10px;
+
+    a {
+        color: var(--white);
+        font-weight: bold;
+    }
+}
+
+
+.register-form {
+
+    ul {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        background-color: var(--blue);
+        color: var(--white);
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    li {
+        list-style: none;
+    }
+
+
+    input[type="text"] {
+        border: 1px hsl(228deg, 45%, 44%) solid;
+    }
+
+    .cards_img {
+        margin-top: 10px;
+    }
+
+    .agree {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+        label {
+            margin-left: 5px;
+        }
+    }
+    input[type="checkbox"] {
+        margin: 0;
+        font: inherit;
+        width: 1.15em;
+        height: 1.15em;
+        border: 0.15em solid currentColor;
+        border-radius: 0.15em;
+        transform: translateY(-0.075em);
+        margin: 10px 0 10px 0
+      }
+}
+
+
+
+
+// Table styles
+table {
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 75%;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+table thead tr {
+    height: 60px;
+    background: var(--blue);
+    font-size: 16px;
+    color: #fff;
+}
+
+table tbody tr {
+    height: 50px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+table tbody tr:last-of-type {
+    border: 0;
+}
+
+table tbody tr.active-row {
+    font-weight: bold;
+    color: var(--blue);
+}
+
+table tbody tr td {
+    padding: 10px 15px;
+    text-align: center;
+}
+
+//table a style
+
+table tbody tr td a {
+    color: var(--blue);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+table tbody tr td a:hover {
+    color: var(--blue), 0.6;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+// Styles of specific task
+
+
+
+
+
+
+
+
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

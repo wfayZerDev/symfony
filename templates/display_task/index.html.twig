@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DisplayTaskController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper {
+        margin: 1em auto;
+        max-width: 800px;
+        width: 95%;
+        font: 18px/1.5 sans-serif;
+    }
+
+    .example-wrapper code {
+        background: #F5F5F5;
+        padding: 2px 6px;
+    }
+</style>
+
+{{ dump(task) }}
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Content</th>
+                <th>Updated</th>
+                <th>Created</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        {% for tasks in task %}
+        <tr>
+
+            {# If condition title > 50 #}
+            {% if tasks.title|length > 50 %}
+                <td>{{ tasks.title|slice(0, 50) ~ '...' }}</td>
+            {% else %}
+                <td>{{ tasks.title }}</td>
+            {% endif %}
+
+            {# If condition content > 50 #}
+            {% if tasks.content|length > 50 %}
+                <td>{{ tasks.content|slice(0, 50) ~ '...' }}</td>
+            {% else %}
+                <td>{{ tasks.content }}</td>
+            {% endif %}
+            {# Display updated date task with +1h #}
+            <td>{{ tasks.updatedAt|date_modify('+1 hour')|date('d/m/Y H:i:s') }}</td>
+            {# Display Created at Date task  with +1h #}
+            <td>{{ tasks.createdAt|date_modify('+1 hour')|date('d/m/Y H:i:s') }}</td>
+            <td>
+                <a href="{{ path('app_edit_task', {'id': tasks.id}) }}">edit</a>
+                <a href="{{ path('app_remove_task', {'id': tasks.id}) }}">delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endblock %}
