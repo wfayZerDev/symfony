@@ -29,9 +29,17 @@
         <label for="description" name="description">{{ form_label(NewTaskForm.content) }}</label>
         {{ form_widget(NewTaskForm.content) }}
 
+        <label for="description" name="description">{{ form_label(NewTaskForm.completed_at) }}</label>
+        {{ form_widget(NewTaskForm.completed_at) }}
+
         <label for="status" name="status">Status</label>
         {{ form_widget(NewTaskForm.status_id) }}
 
+        <label>Owner</label>
+        {{ form_widget(NewTaskForm.owner_id) }}
+
+        <label>User</label>
+        {{ form_widget(NewTaskForm.user_id) }}
 
         <button type="submit" class="btn">Post Ticket</button>
       </div>

@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\TaskRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -33,6 +35,17 @@ class Task
 
     #[ORM\ManyToOne(inversedBy: 'tasks')]
     private ?Status $status_id = null;
+
+    #[ORM\ManyToMany(targetEntity: User::class, inversedBy: 'tasks')]
+    private Collection $user_id;
+
+    #[ORM\ManyToOne(inversedBy: 'tasks')]
+    private ?User $owner_id = null;
+
+    public function __construct()
+    {
+        $this->user_id = new ArrayCollection();
+    }
 
 
     #[ORM\PrePersist]
@@ -124,6 +137,43 @@ class Task
 
         return $this;
     }
+
+    /**
+     * @return Collection<int, User>
+     */
+    public function getUserId(): Collection
+    {
+        return $this->user_id;
+    }
+
+    public function addUserId(User $userId): self
+    {
+        if (!$this->user_id->contains($userId)) {
+            $this->user_id->add($userId);
+        }
+
+        return $this;
+    }
+
+    public function removeUserId(User $userId): self
+    {
+        $this->user_id->removeElement($userId);
+
+        return $this;
+    }
+
+    public function getOwnerId(): ?User
+    {
+        return $this->owner_id;
+    }
+
+    public function setOwnerId(?User $owner_id): self
+    {
+        $this->owner_id = $owner_id;
+
+        return $this;
+    }
+
 
 
 }

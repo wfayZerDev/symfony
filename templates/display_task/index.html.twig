@@ -17,12 +17,15 @@
     }
 </style>
 
-{{ dump(task) }}
+
+
+
     <table>
         <thead>
             <tr>
                 <th>Title</th>
                 <th>Content</th>
+                <th>Status</th>
                 <th>Updated</th>
                 <th>Created</th>
                 <th>Actions</th>
@@ -35,24 +38,44 @@
 
             {# If condition title > 50 #}
             {% if tasks.title|length > 50 %}
-                <td>{{ tasks.title|slice(0, 50) ~ '...' }}</td>
+                <td><a href="{{ path('app_display_task_specific', {'id': tasks.id}) }}">{{ tasks.title|slice(0, 50) ~ '...' }}</a></td>
             {% else %}
-                <td>{{ tasks.title }}</td>
+                {# Link of display task by id #}
+                <td><a href="{{ path('app_display_task_specific', {'id': tasks.id}) }}">{{ tasks.title }}</a></td>
             {% endif %}
 
+
             {# If condition content > 50 #}
-            {% if tasks.content|length > 50 %}
-                <td>{{ tasks.content|slice(0, 50) ~ '...' }}</td>
+            {% if tasks.content|length > 80 %}
+                <td><span class="preview-content">{{ tasks.content|slice(0, 80) ~ '...' }}</span></td>
             {% else %}
-                <td>{{ tasks.content }}</td>
+            {# Link of display task by id #}
+                <td><span class="preview-content">{{ tasks.content }}</span></td>
             {% endif %}
+
+
+
+            {% if tasks.status == "En cours" %}
+                <td><span class="InProgress">{{ tasks.status }}</span></td>
+            {% elseif tasks.status == "En attente" %}
+                <td><span class="waiting">{{ tasks.status }}</span></td>
+            {% elseif tasks.status == "Terminé" %}
+                <td><span class="done">{{ tasks.status }}</span></td>
+            {% else %}
+            {% endif %}
+
+
             {# Display updated date task with +1h #}
             <td>{{ tasks.updatedAt|date_modify('+1 hour')|date('d/m/Y H:i:s') }}</td>
             {# Display Created at Date task  with +1h #}
             <td>{{ tasks.createdAt|date_modify('+1 hour')|date('d/m/Y H:i:s') }}</td>
+            {# Display status of task #}
+
+            {# Display link edit and delete task #}
             <td>
-                <a href="{{ path('app_edit_task', {'id': tasks.id}) }}">edit</a>
-                <a href="{{ path('app_remove_task', {'id': tasks.id}) }}">delete</a>
+                <span><a href="{{ path('app_edit_task', {'id': tasks.id}) }}">edit</a>
+                |
+                <a href="{{ path('app_remove_task', {'id': tasks.id}) }}">delete</a></span>
             </td>
         </tr>
         {% endfor %}

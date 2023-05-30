@@ -5,6 +5,7 @@ body {
 }
 * {
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
@@ -18,6 +19,48 @@ body {
     background-color: var(--bgcolor);
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
+
+.example-wrapper {
+    margin: 1em auto;
+    max-width: 800px;
+    width: 95%;
+    font: 18px/1.5 sans-serif;
+}
+
+.example-wrapper code {
+    background: #F5F5F5;
+    padding: 2px 6px;
+}
+
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    margin-bottom: 2em;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: var(--blue);
+  }
+  
+  .topnav a.active {
+    background-color: var(--blue);
+    color: white;
+  }
+  
+  .topnav-right {
+    float: right;
+  }
+
 
 
 input[type="text"], input[type="email"], input[type="password"] {
@@ -144,6 +187,18 @@ select {
     background-color: var(--white);
 }
 
+.preview-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--white);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    word-break: break-all;
+    max-width: 400px;
+    text-align: justify;
+}
 
 
 
@@ -218,10 +273,10 @@ table {
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
-    width: 75%;
     margin: 0 auto;
     position: relative;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    margin-top: 50px;
 }
 
 table thead tr {
@@ -265,17 +320,87 @@ table tbody tr td a:hover {
 }
 
 
+
+
+.waiting {
+    background-color: hsl(228, 45%, 44%);
+    color: var(--white);
+    width: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.done {
+    background-color: hsl(154, 45%, 44%);
+    color: var(--white);
+    width: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.InProgress {
+    background-color: hsl(16, 83%, 50%);
+    color: var(--white);
+    width: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+
 // Styles of specific task
 
 
+.label-cards {
+    background-color: var(--blue);
+    color: var(--white);
+    width: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.small {
+    font-size: 14px;
+    color: hsl(228, 45%, 44%);
+}
+
+.content {
+    font-size: 16px;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
 
 
+.content_task {
+    margin-top: 30px;
+}
 
 
+.task_tools {
+    display: flex;
+    justify-content: center;
+    
+    a {
+        margin: 10px 10px 0 0;
+        color: var(--blue);
+        font-weight: bold;
+        text-decoration: none;
+    }
 
-
-
-
+    a:hover {
+        color: var(--blue), 0.6;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+}
 
 
 .attribution { font-size: 11px; text-align: center; }
