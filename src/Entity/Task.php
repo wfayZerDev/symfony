@@ -30,8 +30,6 @@ class Task
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
     private ?\DateTimeInterface $updated_at = null;
 
-    #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
-    private ?\DateTimeInterface $completed_at = null;
 
     #[ORM\ManyToOne(inversedBy: 'tasks')]
     private ?Status $status_id = null;
@@ -47,6 +45,12 @@ class Task
 
     #[ORM\ManyToOne(inversedBy: 'section_id')]
     private ?Section $section = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $Region = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $etat_objet = null;
 
     public function __construct()
     {
@@ -120,18 +124,6 @@ class Task
         return $this;
     }
 
-    public function getCompletedAt(): ?\DateTimeInterface
-    {
-        return $this->completed_at;
-    }
-
-    public function setCompletedAt(?\DateTimeInterface $completed_at): self
-    {
-        $this->completed_at = $completed_at;
-
-        return $this;
-    }
-
     public function getStatusId(): ?Status
     {
         return $this->status_id;
@@ -200,6 +192,30 @@ class Task
     public function setSection(?Section $section): self
     {
         $this->section = $section;
+
+        return $this;
+    }
+
+    public function getRegion(): ?string
+    {
+        return $this->Region;
+    }
+
+    public function setRegion(string $Region): self
+    {
+        $this->Region = $Region;
+
+        return $this;
+    }
+
+    public function getEtatObjet(): ?string
+    {
+        return $this->etat_objet;
+    }
+
+    public function setEtatObjet(string $etat_objet): self
+    {
+        $this->etat_objet = $etat_objet;
 
         return $this;
     }

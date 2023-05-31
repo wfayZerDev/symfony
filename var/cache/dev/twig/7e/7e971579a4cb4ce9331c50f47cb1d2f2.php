@@ -122,107 +122,106 @@ class __TwigTemplate_dd9c4dfe54ffde6e52ae63ef0b63d962 extends Template
         foreach ($context['_seq'] as $context["_key"] => $context["tasks"]) {
             // line 37
             echo "        <tr>
+            
+            <td><img src=\"";
+            // line 39
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["tasks"], "picture", [], "any", false, false, false, 39), "html", null, true);
+            echo "\" alt=\"image\"></td>
 
             ";
-            // line 40
+            // line 42
             echo "            ";
-            if ((twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, $context["tasks"], "title", [], "any", false, false, false, 40)) > 50)) {
-                // line 41
-                echo "                <td><a href=\"";
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_display_task_specific", ["id" => twig_get_attribute($this->env, $this->source, $context["tasks"], "id", [], "any", false, false, false, 41)]), "html", null, true);
-                echo "\">";
-                echo twig_escape_filter($this->env, (twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["tasks"], "title", [], "any", false, false, false, 41), 0, 50) . "..."), "html", null, true);
-                echo "</a></td>
-            ";
-            } else {
+            if ((twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, $context["tasks"], "title", [], "any", false, false, false, 42)) > 50)) {
                 // line 43
-                echo "                ";
-                // line 44
                 echo "                <td><a href=\"";
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_display_task_specific", ["id" => twig_get_attribute($this->env, $this->source, $context["tasks"], "id", [], "any", false, false, false, 44)]), "html", null, true);
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_display_task_specific", ["id" => twig_get_attribute($this->env, $this->source, $context["tasks"], "id", [], "any", false, false, false, 43)]), "html", null, true);
                 echo "\">";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["tasks"], "title", [], "any", false, false, false, 44), "html", null, true);
+                echo twig_escape_filter($this->env, (twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["tasks"], "title", [], "any", false, false, false, 43), 0, 50) . "..."), "html", null, true);
+                echo "</a></td>
+            ";
+            } else {
+                // line 45
+                echo "                ";
+                // line 46
+                echo "                <td><a href=\"";
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_display_task_specific", ["id" => twig_get_attribute($this->env, $this->source, $context["tasks"], "id", [], "any", false, false, false, 46)]), "html", null, true);
+                echo "\">";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["tasks"], "title", [], "any", false, false, false, 46), "html", null, true);
                 echo "</a></td>
             ";
             }
-            // line 46
+            // line 48
             echo "
 
             ";
-            // line 49
+            // line 51
             echo "            ";
-            if ((twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, $context["tasks"], "content", [], "any", false, false, false, 49)) > 80)) {
-                // line 50
+            if ((twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, $context["tasks"], "content", [], "any", false, false, false, 51)) > 80)) {
+                // line 52
                 echo "                <td><span class=\"preview-content\">";
-                echo twig_escape_filter($this->env, (twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["tasks"], "content", [], "any", false, false, false, 50), 0, 80) . "..."), "html", null, true);
+                echo twig_escape_filter($this->env, (twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["tasks"], "content", [], "any", false, false, false, 52), 0, 80) . "..."), "html", null, true);
                 echo "</span></td>
             ";
             } else {
-                // line 52
+                // line 54
                 echo "            ";
-                // line 53
+                // line 55
                 echo "                <td><span class=\"preview-content\">";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["tasks"], "content", [], "any", false, false, false, 53), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["tasks"], "content", [], "any", false, false, false, 55), "html", null, true);
                 echo "</span></td>
             ";
             }
-            // line 55
+            // line 57
             echo "
 
 
             ";
-            // line 58
-            if ((twig_get_attribute($this->env, $this->source, $context["tasks"], "status", [], "any", false, false, false, 58) == "En cours")) {
-                // line 59
-                echo "                <td><span class=\"InProgress\">";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["tasks"], "status", [], "any", false, false, false, 59), "html", null, true);
-                echo "</span></td>
-            ";
-            } elseif ((twig_get_attribute($this->env, $this->source,             // line 60
-$context["tasks"], "status", [], "any", false, false, false, 60) == "En attente")) {
+            // line 60
+            if ((twig_get_attribute($this->env, $this->source, $context["tasks"], "status", [], "any", false, false, false, 60) == "À vendre")) {
                 // line 61
-                echo "                <td><span class=\"waiting\">";
+                echo "                <td><span class=\"InProgress\">";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["tasks"], "status", [], "any", false, false, false, 61), "html", null, true);
                 echo "</span></td>
             ";
             } elseif ((twig_get_attribute($this->env, $this->source,             // line 62
-$context["tasks"], "status", [], "any", false, false, false, 62) == "Terminé")) {
+$context["tasks"], "status", [], "any", false, false, false, 62) == "Trocked")) {
                 // line 63
-                echo "                <td><span class=\"done\">";
+                echo "                <td><span class=\"waiting\">";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["tasks"], "status", [], "any", false, false, false, 63), "html", null, true);
                 echo "</span></td>
             ";
-            } else {
+            } elseif ((twig_get_attribute($this->env, $this->source,             // line 64
+$context["tasks"], "status", [], "any", false, false, false, 64) == "Réserver")) {
                 // line 65
+                echo "                <td><span class=\"done\">";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["tasks"], "status", [], "any", false, false, false, 65), "html", null, true);
+                echo "</span></td>
+            ";
+            } else {
+                // line 67
                 echo "            ";
             }
-            // line 66
+            // line 68
             echo "
 
-            ";
-            // line 69
-            echo "            <td>";
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_date_modify_filter($this->env, twig_get_attribute($this->env, $this->source, $context["tasks"], "updatedAt", [], "any", false, false, false, 69), "+1 hour"), "d/m/Y H:i:s"), "html", null, true);
+            <td>";
+            // line 70
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_date_modify_filter($this->env, twig_get_attribute($this->env, $this->source, $context["tasks"], "createdAt", [], "any", false, false, false, 70), "+1 hour"), "d/m/Y H:i:s"), "html", null, true);
             echo "</td>
             ";
-            // line 71
-            echo "            <td>";
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_date_modify_filter($this->env, twig_get_attribute($this->env, $this->source, $context["tasks"], "createdAt", [], "any", false, false, false, 71), "+1 hour"), "d/m/Y H:i:s"), "html", null, true);
-            echo "</td>
-            ";
-            // line 73
+            // line 72
             echo "
             ";
-            // line 75
+            // line 74
             echo "            <td>
                 <span><a href=\"";
-            // line 76
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_edit_task", ["id" => twig_get_attribute($this->env, $this->source, $context["tasks"], "id", [], "any", false, false, false, 76)]), "html", null, true);
+            // line 75
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_edit_task", ["id" => twig_get_attribute($this->env, $this->source, $context["tasks"], "id", [], "any", false, false, false, 75)]), "html", null, true);
             echo "\">edit</a>
                 |
                 <a href=\"";
-            // line 78
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_remove_task", ["id" => twig_get_attribute($this->env, $this->source, $context["tasks"], "id", [], "any", false, false, false, 78)]), "html", null, true);
+            // line 77
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_remove_task", ["id" => twig_get_attribute($this->env, $this->source, $context["tasks"], "id", [], "any", false, false, false, 77)]), "html", null, true);
             echo "\">delete</a></span>
             </td>
         </tr>
@@ -231,7 +230,7 @@ $context["tasks"], "status", [], "any", false, false, false, 62) == "Terminé"))
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['tasks'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 82
+        // line 81
         echo "        </tbody>
     </table>
     ";
@@ -255,7 +254,7 @@ $context["tasks"], "status", [], "any", false, false, false, 62) == "Terminé"))
 
     public function getDebugInfo()
     {
-        return array (  235 => 82,  225 => 78,  220 => 76,  217 => 75,  214 => 73,  209 => 71,  204 => 69,  200 => 66,  197 => 65,  191 => 63,  189 => 62,  184 => 61,  182 => 60,  177 => 59,  175 => 58,  170 => 55,  164 => 53,  162 => 52,  156 => 50,  153 => 49,  149 => 46,  141 => 44,  139 => 43,  131 => 41,  128 => 40,  124 => 37,  120 => 36,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  234 => 81,  224 => 77,  219 => 75,  216 => 74,  213 => 72,  209 => 70,  205 => 68,  202 => 67,  196 => 65,  194 => 64,  189 => 63,  187 => 62,  182 => 61,  180 => 60,  175 => 57,  169 => 55,  167 => 54,  161 => 52,  158 => 51,  154 => 48,  146 => 46,  144 => 45,  136 => 43,  133 => 42,  128 => 39,  124 => 37,  120 => 36,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -297,6 +296,8 @@ $context["tasks"], "status", [], "any", false, false, false, 62) == "Terminé"))
 
         {% for tasks in task %}
         <tr>
+            
+            <td><img src=\"{{ tasks.picture }}\" alt=\"image\"></td>
 
             {# If condition title > 50 #}
             {% if tasks.title|length > 50 %}
@@ -317,19 +318,16 @@ $context["tasks"], "status", [], "any", false, false, false, 62) == "Terminé"))
 
 
 
-            {% if tasks.status == \"En cours\" %}
+            {% if tasks.status == \"À vendre\" %}
                 <td><span class=\"InProgress\">{{ tasks.status }}</span></td>
-            {% elseif tasks.status == \"En attente\" %}
+            {% elseif tasks.status == \"Trocked\" %}
                 <td><span class=\"waiting\">{{ tasks.status }}</span></td>
-            {% elseif tasks.status == \"Terminé\" %}
+            {% elseif tasks.status == \"Réserver\" %}
                 <td><span class=\"done\">{{ tasks.status }}</span></td>
             {% else %}
             {% endif %}
 
 
-            {# Display updated date task with +1h #}
-            <td>{{ tasks.updatedAt|date_modify('+1 hour')|date('d/m/Y H:i:s') }}</td>
-            {# Display Created at Date task  with +1h #}
             <td>{{ tasks.createdAt|date_modify('+1 hour')|date('d/m/Y H:i:s') }}</td>
             {# Display status of task #}
 

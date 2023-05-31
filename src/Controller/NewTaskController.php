@@ -28,11 +28,17 @@ class NewTaskController extends AbstractController
         if ($request->attributes->get('_route') == 'app_display_task_specific') {
             $task = $entityManager->getRepository(Task::class)->find($id);
 
-            // get complet_at to string
-            $completed_at = $entityManager->getRepository(Task::class)->find($id);
-            $completed_at = $completed_at->getCompletedAt();
-            $completed_at = $completed_at->format('D/m/Y');
+            // get picture url to string
+            $picture = $entityManager->getRepository(Task::class)->find($id);
+            $picture = $picture->getPicture();
 
+            // get region to string
+            $region = $entityManager->getRepository(Task::class)->find($id);
+            $region = $region->getRegion();
+
+            // get etat objet to string
+            $etat_objet = $entityManager->getRepository(Task::class)->find($id);
+            $etat_objet = $etat_objet->getEtatObjet();
 
             // get owner id to string
             $owner = $entityManager->getRepository(Task::class)->find($id);
@@ -43,16 +49,10 @@ class NewTaskController extends AbstractController
             $status = $entityManager->getRepository(Task::class)->find($id);
             $status = $status->getStatusId();
 
-            // get user id to string
-            $user = $entityManager->getRepository(Task::class)->find($id);
-            $user = $user->getUserId();
-            // $user = $user->getFirstName() . ' ' . $user->getLastName();
             return $this->render('specific_task/index.html.twig', [
                 'task' => $task,
                 'owner' => $owner,
-                'user' => $user,
                 'status' => $status,
-                'completed_at' => $completed_at,
             ]);
         }
         // remove task
@@ -63,7 +63,6 @@ class NewTaskController extends AbstractController
             return $this->redirectToRoute('app_display_task');
         }
         // edit task
-        $task->setCompletedAt((new \DateTime())->add(new \DateInterval('P3D')));
         if ($id) {
             $task = $entityManager->getRepository(Task::class)->find($id);
         }

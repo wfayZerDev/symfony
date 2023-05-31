@@ -35,6 +35,8 @@
 
         {% for tasks in task %}
         <tr>
+            
+            <td><img src="{{ tasks.picture }}" alt="image"></td>
 
             {# If condition title > 50 #}
             {% if tasks.title|length > 50 %}
@@ -55,19 +57,16 @@
 
 
 
-            {% if tasks.status == "En cours" %}
+            {% if tasks.status == "À vendre" %}
                 <td><span class="InProgress">{{ tasks.status }}</span></td>
-            {% elseif tasks.status == "En attente" %}
+            {% elseif tasks.status == "Trocked" %}
                 <td><span class="waiting">{{ tasks.status }}</span></td>
-            {% elseif tasks.status == "Terminé" %}
+            {% elseif tasks.status == "Réserver" %}
                 <td><span class="done">{{ tasks.status }}</span></td>
             {% else %}
             {% endif %}
 
 
-            {# Display updated date task with +1h #}
-            <td>{{ tasks.updatedAt|date_modify('+1 hour')|date('d/m/Y H:i:s') }}</td>
-            {# Display Created at Date task  with +1h #}
             <td>{{ tasks.createdAt|date_modify('+1 hour')|date('d/m/Y H:i:s') }}</td>
             {# Display status of task #}
 

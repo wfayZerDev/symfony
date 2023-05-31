@@ -92,11 +92,11 @@ class __TwigTemplate_2c2e9a2a9355c86e5eb9d2674a5d9177 extends Template
         // line 8
         if (twig_get_attribute($this->env, $this->source, (isset($context["task"]) || array_key_exists("task", $context) ? $context["task"] : (function () { throw new RuntimeError('Variable "task" does not exist.', 8, $this->source); })()), "id", [], "any", false, false, false, 8)) {
             // line 9
-            echo "      <h1>Edit Ticket</h1>
+            echo "      <h1>Edit Product</h1>
     ";
         } else {
             // line 11
-            echo "      <h1>New Ticket</h1>
+            echo "      <h1>New Product</h1>
     ";
         }
         // line 13
@@ -140,36 +140,35 @@ class __TwigTemplate_2c2e9a2a9355c86e5eb9d2674a5d9177 extends Template
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["NewTaskForm"]) || array_key_exists("NewTaskForm", $context) ? $context["NewTaskForm"] : (function () { throw new RuntimeError('Variable "NewTaskForm" does not exist.', 30, $this->source); })()), "content", [], "any", false, false, false, 30), 'widget');
         echo "
 
-        <label for=\"description\" name=\"description\">";
-        // line 32
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["NewTaskForm"]) || array_key_exists("NewTaskForm", $context) ? $context["NewTaskForm"] : (function () { throw new RuntimeError('Variable "NewTaskForm" does not exist.', 32, $this->source); })()), "completed_at", [], "any", false, false, false, 32), 'label');
-        echo "</label>
-        ";
-        // line 33
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["NewTaskForm"]) || array_key_exists("NewTaskForm", $context) ? $context["NewTaskForm"] : (function () { throw new RuntimeError('Variable "NewTaskForm" does not exist.', 33, $this->source); })()), "completed_at", [], "any", false, false, false, 33), 'widget');
-        echo "
 
         <label for=\"status\" name=\"status\">Status</label>
         ";
-        // line 36
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["NewTaskForm"]) || array_key_exists("NewTaskForm", $context) ? $context["NewTaskForm"] : (function () { throw new RuntimeError('Variable "NewTaskForm" does not exist.', 36, $this->source); })()), "status_id", [], "any", false, false, false, 36), 'widget');
+        // line 34
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["NewTaskForm"]) || array_key_exists("NewTaskForm", $context) ? $context["NewTaskForm"] : (function () { throw new RuntimeError('Variable "NewTaskForm" does not exist.', 34, $this->source); })()), "status_id", [], "any", false, false, false, 34), 'widget');
         echo "
 
         <label>Owner</label>
         ";
-        // line 39
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["NewTaskForm"]) || array_key_exists("NewTaskForm", $context) ? $context["NewTaskForm"] : (function () { throw new RuntimeError('Variable "NewTaskForm" does not exist.', 39, $this->source); })()), "owner_id", [], "any", false, false, false, 39), 'widget');
+        // line 37
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["NewTaskForm"]) || array_key_exists("NewTaskForm", $context) ? $context["NewTaskForm"] : (function () { throw new RuntimeError('Variable "NewTaskForm" does not exist.', 37, $this->source); })()), "owner_id", [], "any", false, false, false, 37), 'widget');
         echo "
 
-        <label>User</label>
-        ";
-        // line 42
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["NewTaskForm"]) || array_key_exists("NewTaskForm", $context) ? $context["NewTaskForm"] : (function () { throw new RuntimeError('Variable "NewTaskForm" does not exist.', 42, $this->source); })()), "user_id", [], "any", false, false, false, 42), 'widget');
-        echo "
         <label>Pitucre</label>
         ";
-        // line 44
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["NewTaskForm"]) || array_key_exists("NewTaskForm", $context) ? $context["NewTaskForm"] : (function () { throw new RuntimeError('Variable "NewTaskForm" does not exist.', 44, $this->source); })()), "pitucre", [], "any", false, false, false, 44), 'widget');
+        // line 40
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["NewTaskForm"]) || array_key_exists("NewTaskForm", $context) ? $context["NewTaskForm"] : (function () { throw new RuntimeError('Variable "NewTaskForm" does not exist.', 40, $this->source); })()), "picture", [], "any", false, false, false, 40), 'widget');
+        echo "
+
+        <label>Région</label>
+        ";
+        // line 43
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["NewTaskForm"]) || array_key_exists("NewTaskForm", $context) ? $context["NewTaskForm"] : (function () { throw new RuntimeError('Variable "NewTaskForm" does not exist.', 43, $this->source); })()), "Region", [], "any", false, false, false, 43), 'widget');
+        echo "
+
+        <label>État de l'objet</label>
+        ";
+        // line 46
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["NewTaskForm"]) || array_key_exists("NewTaskForm", $context) ? $context["NewTaskForm"] : (function () { throw new RuntimeError('Variable "NewTaskForm" does not exist.', 46, $this->source); })()), "etat_objet", [], "any", false, false, false, 46), 'widget');
         echo "
 
         <button type=\"submit\" class=\"btn\">Post Ticket</button>
@@ -177,8 +176,8 @@ class __TwigTemplate_2c2e9a2a9355c86e5eb9d2674a5d9177 extends Template
     </div>
   </div>
     ";
-        // line 50
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["NewTaskForm"]) || array_key_exists("NewTaskForm", $context) ? $context["NewTaskForm"] : (function () { throw new RuntimeError('Variable "NewTaskForm" does not exist.', 50, $this->source); })()), 'form_end');
+        // line 52
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["NewTaskForm"]) || array_key_exists("NewTaskForm", $context) ? $context["NewTaskForm"] : (function () { throw new RuntimeError('Variable "NewTaskForm" does not exist.', 52, $this->source); })()), 'form_end');
         echo "
 
 ";
@@ -202,7 +201,7 @@ class __TwigTemplate_2c2e9a2a9355c86e5eb9d2674a5d9177 extends Template
 
     public function getDebugInfo()
     {
-        return array (  181 => 50,  172 => 44,  167 => 42,  161 => 39,  155 => 36,  149 => 33,  145 => 32,  140 => 30,  136 => 29,  132 => 28,  128 => 27,  116 => 18,  112 => 17,  107 => 15,  103 => 13,  99 => 11,  95 => 9,  93 => 8,  88 => 5,  78 => 4,  59 => 3,  36 => 1,);
+        return array (  180 => 52,  171 => 46,  165 => 43,  159 => 40,  153 => 37,  147 => 34,  140 => 30,  136 => 29,  132 => 28,  128 => 27,  116 => 18,  112 => 17,  107 => 15,  103 => 13,  99 => 11,  95 => 9,  93 => 8,  88 => 5,  78 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -215,9 +214,9 @@ class __TwigTemplate_2c2e9a2a9355c86e5eb9d2674a5d9177 extends Template
     <div class=\"space\">
 
     {% if task.id %}
-      <h1>Edit Ticket</h1>
+      <h1>Edit Product</h1>
     {% else %}
-      <h1>New Ticket</h1>
+      <h1>New Product</h1>
     {% endif %}
 
 
@@ -238,8 +237,6 @@ class __TwigTemplate_2c2e9a2a9355c86e5eb9d2674a5d9177 extends Template
         <label for=\"description\" name=\"description\">{{ form_label(NewTaskForm.content) }}</label>
         {{ form_widget(NewTaskForm.content) }}
 
-        <label for=\"description\" name=\"description\">{{ form_label(NewTaskForm.completed_at) }}</label>
-        {{ form_widget(NewTaskForm.completed_at) }}
 
         <label for=\"status\" name=\"status\">Status</label>
         {{ form_widget(NewTaskForm.status_id) }}
@@ -247,10 +244,14 @@ class __TwigTemplate_2c2e9a2a9355c86e5eb9d2674a5d9177 extends Template
         <label>Owner</label>
         {{ form_widget(NewTaskForm.owner_id) }}
 
-        <label>User</label>
-        {{ form_widget(NewTaskForm.user_id) }}
         <label>Pitucre</label>
-        {{ form_widget(NewTaskForm.pitucre) }}
+        {{ form_widget(NewTaskForm.picture) }}
+
+        <label>Région</label>
+        {{ form_widget(NewTaskForm.Region) }}
+
+        <label>État de l'objet</label>
+        {{ form_widget(NewTaskForm.etat_objet) }}
 
         <button type=\"submit\" class=\"btn\">Post Ticket</button>
       </div>

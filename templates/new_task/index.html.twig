@@ -6,9 +6,9 @@
     <div class="space">
 
     {% if task.id %}
-      <h1>Edit Ticket</h1>
+      <h1>Edit Product</h1>
     {% else %}
-      <h1>New Ticket</h1>
+      <h1>New Product</h1>
     {% endif %}
 
 
@@ -29,8 +29,6 @@
         <label for="description" name="description">{{ form_label(NewTaskForm.content) }}</label>
         {{ form_widget(NewTaskForm.content) }}
 
-        <label for="description" name="description">{{ form_label(NewTaskForm.completed_at) }}</label>
-        {{ form_widget(NewTaskForm.completed_at) }}
 
         <label for="status" name="status">Status</label>
         {{ form_widget(NewTaskForm.status_id) }}
@@ -38,9 +36,14 @@
         <label>Owner</label>
         {{ form_widget(NewTaskForm.owner_id) }}
 
-        <label>User</label>
-        {{ form_widget(NewTaskForm.user_id) }}
         <label>Pitucre</label>
+        {{ form_widget(NewTaskForm.picture) }}
+
+        <label>Région</label>
+        {{ form_widget(NewTaskForm.Region) }}
+
+        <label>État de l'objet</label>
+        {{ form_widget(NewTaskForm.etat_objet) }}
 
         <button type="submit" class="btn">Post Ticket</button>
       </div>
