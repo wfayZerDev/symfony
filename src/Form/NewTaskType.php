@@ -10,6 +10,8 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use App\Entity\Status;
 use App\Entity\User;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Validator\Constraints\File;
 
 
 class NewTaskType extends AbstractType
@@ -19,6 +21,21 @@ class NewTaskType extends AbstractType
         $builder
             ->add('title')
             ->add('content')
+            ->add('picture', FileType::class, [
+                'label' => 'Picture (png, jpg, jpeg, gif)',
+                'mapped' => false,
+                'required' => false,
+                'constraints' => [
+                    new File([
+                        'mimeTypes' => [
+                            'image/png',
+                            'image/jpeg',
+                            'image/gif',
+                        ],
+                        'mimeTypesMessage' => 'Please upload a valid picture',
+                    ])
+                ],
+            ])
             ->add('completed_at', null, [
                 'widget' => 'single_text',
                 'attr' => ['class' => 'js-datepicker'],
@@ -34,6 +51,7 @@ class NewTaskType extends AbstractType
                 'class' => User::class, 
                 'choice_label' => 'fullName', 
                 'multiple' => true,]);
+
     }
 
     public function configureOptions(OptionsResolver $resolver): void

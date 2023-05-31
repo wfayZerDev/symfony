@@ -42,6 +42,12 @@ class Task
     #[ORM\ManyToOne(inversedBy: 'tasks')]
     private ?User $owner_id = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $picture = null;
+
+    #[ORM\ManyToOne(inversedBy: 'section_id')]
+    private ?Section $section = null;
+
     public function __construct()
     {
         $this->user_id = new ArrayCollection();
@@ -170,6 +176,30 @@ class Task
     public function setOwnerId(?User $owner_id): self
     {
         $this->owner_id = $owner_id;
+
+        return $this;
+    }
+
+    public function getPicture(): ?string
+    {
+        return $this->picture;
+    }
+
+    public function setPicture(string $picture): self
+    {
+        $this->picture = $picture;
+
+        return $this;
+    }
+
+    public function getSection(): ?Section
+    {
+        return $this->section;
+    }
+
+    public function setSection(?Section $section): self
+    {
+        $this->section = $section;
 
         return $this;
     }

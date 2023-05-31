@@ -166,14 +166,19 @@ class __TwigTemplate_2c2e9a2a9355c86e5eb9d2674a5d9177 extends Template
         // line 42
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["NewTaskForm"]) || array_key_exists("NewTaskForm", $context) ? $context["NewTaskForm"] : (function () { throw new RuntimeError('Variable "NewTaskForm" does not exist.', 42, $this->source); })()), "user_id", [], "any", false, false, false, 42), 'widget');
         echo "
+        <label>Pitucre</label>
+        ";
+        // line 44
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["NewTaskForm"]) || array_key_exists("NewTaskForm", $context) ? $context["NewTaskForm"] : (function () { throw new RuntimeError('Variable "NewTaskForm" does not exist.', 44, $this->source); })()), "pitucre", [], "any", false, false, false, 44), 'widget');
+        echo "
 
         <button type=\"submit\" class=\"btn\">Post Ticket</button>
       </div>
     </div>
   </div>
     ";
-        // line 48
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["NewTaskForm"]) || array_key_exists("NewTaskForm", $context) ? $context["NewTaskForm"] : (function () { throw new RuntimeError('Variable "NewTaskForm" does not exist.', 48, $this->source); })()), 'form_end');
+        // line 50
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["NewTaskForm"]) || array_key_exists("NewTaskForm", $context) ? $context["NewTaskForm"] : (function () { throw new RuntimeError('Variable "NewTaskForm" does not exist.', 50, $this->source); })()), 'form_end');
         echo "
 
 ";
@@ -197,7 +202,7 @@ class __TwigTemplate_2c2e9a2a9355c86e5eb9d2674a5d9177 extends Template
 
     public function getDebugInfo()
     {
-        return array (  176 => 48,  167 => 42,  161 => 39,  155 => 36,  149 => 33,  145 => 32,  140 => 30,  136 => 29,  132 => 28,  128 => 27,  116 => 18,  112 => 17,  107 => 15,  103 => 13,  99 => 11,  95 => 9,  93 => 8,  88 => 5,  78 => 4,  59 => 3,  36 => 1,);
+        return array (  181 => 50,  172 => 44,  167 => 42,  161 => 39,  155 => 36,  149 => 33,  145 => 32,  140 => 30,  136 => 29,  132 => 28,  128 => 27,  116 => 18,  112 => 17,  107 => 15,  103 => 13,  99 => 11,  95 => 9,  93 => 8,  88 => 5,  78 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -244,6 +249,8 @@ class __TwigTemplate_2c2e9a2a9355c86e5eb9d2674a5d9177 extends Template
 
         <label>User</label>
         {{ form_widget(NewTaskForm.user_id) }}
+        <label>Pitucre</label>
+        {{ form_widget(NewTaskForm.pitucre) }}
 
         <button type=\"submit\" class=\"btn\">Post Ticket</button>
       </div>
