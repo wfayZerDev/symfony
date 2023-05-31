@@ -12,7 +12,6 @@
 
     <div class="container">
         <div class="space">
-            <span class="small">Completed At : {{ task.completedAt|date('d/m/Y') }}</span>
             <span class="small">Last Update : {{ task.createdAt|date('d/m/Y') }}</span>
         </div>
         <span class="title"><b>{{ task.title }}</b></span>
@@ -29,22 +28,21 @@
 
             {% endif %}
         </div>
-        <span>Attribué à :</span>
-        {% for users in user %}
-    {# Display user email #}
-    <span class="done">
-    {{ users.firstname }}
-    {{ users.lastname }}
-    </span>
-    &nbsp;
-    {# Display user firstname #}
-    {% endfor %}
         <div class="content_task">
             <span class="title"><b>Description :</b></span>
             <br />
             <span class="content">{{ task.content }}</span>
         </div>
     </div>
+    {# Button for change status #}
+    <div class="container">
+        <div class="space">
+            <span class="title"><b>Changer le status :</b></span>
+        </div>
+        <div class="space">
+            <a href="{{ path('app_edit_task', {'id': task.id,}) }}" class="done">Trock it !</a>
+        </div>
+
     <div class="task_tools">
                 <a href="{{ path('app_edit_task', {'id': task.id}) }}">edit</a>
                 <a href="{{ path('app_remove_task', {'id': task.id}) }}">delete</a>

@@ -153,7 +153,7 @@ class __TwigTemplate_2c2e9a2a9355c86e5eb9d2674a5d9177 extends Template
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["NewTaskForm"]) || array_key_exists("NewTaskForm", $context) ? $context["NewTaskForm"] : (function () { throw new RuntimeError('Variable "NewTaskForm" does not exist.', 37, $this->source); })()), "owner_id", [], "any", false, false, false, 37), 'widget');
         echo "
 
-        <label>Pitucre</label>
+        <label>Picture</label>
         ";
         // line 40
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["NewTaskForm"]) || array_key_exists("NewTaskForm", $context) ? $context["NewTaskForm"] : (function () { throw new RuntimeError('Variable "NewTaskForm" does not exist.', 40, $this->source); })()), "picture", [], "any", false, false, false, 40), 'widget');
@@ -244,7 +244,7 @@ class __TwigTemplate_2c2e9a2a9355c86e5eb9d2674a5d9177 extends Template
         <label>Owner</label>
         {{ form_widget(NewTaskForm.owner_id) }}
 
-        <label>Pitucre</label>
+        <label>Picture</label>
         {{ form_widget(NewTaskForm.picture) }}
 
         <label>Région</label>
